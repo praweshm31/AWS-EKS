@@ -26,28 +26,31 @@
 
    Download the kubectl binary for your cluster's Kubernetes version from Amazon S3 using the command for your device's hardware platform. The first link for each        version is for amd64 and the second link is for arm64.
    
+A. Download Binaries as per operatinf system
+   
    for amd64
    
         curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.24.10/2023-01-30/bin/linux/amd64/kubectl
 
-    for arm64
+   for arm64
     
-        curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.24.10/2023-01-30/bin/linux/arm64/kubectl
+         curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.24.10/2023-01-30/bin/linux/arm64/kubectl
+     
+     
         
-        
-    Apply execute permissions to the binary.
+B.  Apply execute permissions to the binary.
     
         chmod +x ./kubectl
 
-    Set the Path by copying to user Home Directory
+C.  Set the Path by copying to user Home Directory
 
         mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin
 
-    (Optional) Add the $HOME/bin path to your shell initialization file so that it is configured when you open a shell.
+D.  (Optional) Add the $HOME/bin path to your shell initialization file so that it is configured when you open a shell.
     
         echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
     
-    After you install kubectl, you can verify its version.
+E.  After you install kubectl, you can verify its version.
     
         kubectl version --short --client
 

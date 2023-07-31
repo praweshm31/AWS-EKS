@@ -1,1 +1,2 @@
 hi this is an 1st update in github
+added Second sentence for checkking the process
